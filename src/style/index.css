@@ -1,0 +1,805 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Anek Tamil', sans-serif;
+}
+
+/* Common Styles */
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+.space-btw {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-half {
+  gap: 0.5rem;
+}
+.padd-1 {
+  padding: 1rem 0;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+.pointer {
+  cursor: pointer;
+}
+.margin-rigth-5 {
+  margin-right: 5px;
+}
+
+/* Loading */
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+/* Header */
+
+header {
+  padding: 1rem;
+}
+
+.logo {
+  color: rgb(44, 175, 207);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(182, 182, 182);
+}
+.nav-link:hover {
+  color: rgb(110, 110, 110);
+}
+.active {
+  color: rgb(77, 76, 76);
+}
+.header-user-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Not Found */
+
+.not-found-holder {
+  min-height: 50vh;
+}
+.not-found {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(218, 95, 73);
+}
+
+/* Hero */
+
+/* #hero-section {
+  background-color: rgb(89, 172, 89);
+  padding: 2rem;
+} */
+.hero-heading,
+.hero-subheading {
+  font-size: 3.5rem;
+  color: rgb(17, 164, 201);
+  font-weight: 600;
+  text-align: center;
+}
+.hero-subheading {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+/* Sign in */
+
+.sign-in-form {
+  width: 40%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+.signin-input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-top: 1rem;
+  color: rgb(85, 84, 84);
+}
+.signin-input::placeholder {
+  color: rgb(161, 161, 161);
+}
+.signin-input:focus {
+  outline: none;
+  border: 1px solid rgb(29, 146, 241);
+}
+.signin-submit {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(89, 172, 89);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  float: right;
+}
+.signin-submit:hover {
+  background-color: rgb(121, 199, 121);
+}
+.signin-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+.need-account {
+  text-align: center;
+  color: rgb(89, 172, 89);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  display: block;
+}
+.err-msg {
+  color: red;
+  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Main */
+
+.no-articles {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: tomato;
+}
+.global-feed {
+  cursor: pointer;
+  color: gray;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.feed-toggle::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid rgb(231, 230, 230);
+  margin-top: 0.6rem;
+}
+.row {
+  margin-top: 1rem;
+}
+.feed {
+  width: 69%;
+}
+.tags {
+  width: 29.5%;
+  background-color: rgb(223, 242, 247);
+  border-radius: 5px;
+  height: fit-content;
+  padding: 1.3rem 1.2rem;
+}
+.tags-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(4, 159, 226);
+}
+.tag {
+  background-color: rgb(185, 221, 227);
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+  color: rgb(45, 72, 96);
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid rgb(185, 221, 227);
+}
+.tag:hover {
+  border: 2px solid rgb(95, 95, 95);
+}
+.active-tag {
+  border: 2px solid rgb(95, 95, 95);
+  text-decoration: underline;
+}
+.tag-list-holder {
+  margin-top: 1rem;
+  height: fit-content;
+}
+.pageNo {
+  padding: 10px;
+  color: green;
+  background-color: transparent;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.activePageNo {
+  padding: 10px;
+  border: 1px solid lightgray;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.noOfPage:hover {
+  background-color: green;
+  color: white;
+}
+
+.pagination-holder {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Article */
+
+.author-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.likes-count-holder {
+  padding: 0px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+.likes {
+  color: rgb(99, 173, 99);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.heart {
+  color: rgb(99, 173, 99);
+  font-size: 1.3rem;
+}
+.author-name {
+  color: rgb(99, 173, 99);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.date {
+  color: rgb(105, 105, 105);
+  font-weight: 600;
+}
+.article-title {
+  font-size: 1.7rem;
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  text-align: start;
+  display: block;
+}
+.article-description {
+  font-size: 1rem;
+  color: rgb(143, 143, 143);
+  cursor: pointer;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+}
+.read-more {
+  border: none;
+  background-color: transparent;
+  color: rgb(28, 133, 212);
+  cursor: pointer;
+  font-weight: 600;
+}
+.test {
+  background-color: rgb(185, 219, 227);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+.test:hover {
+  border: none;
+}
+.single-article::after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+}
+.single-article {
+  background-color: rgb(233, 233, 233);
+  padding: 1rem;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.feed-list-holder {
+  margin-top: 1.5rem;
+}
+
+/* Single Article */
+
+#single-art-hero {
+  padding: 2rem;
+  background-color: rgb(166, 211, 221);
+}
+
+#hero-section {
+  background-color: rgb(166, 211, 221);
+  padding: 2rem;
+}
+.single-art-heading,
+.single-art-subheading {
+  text-align: start;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.single-art-subheading {
+  text-align: start;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.author-single-art {
+  color: rgb(95, 95, 95);
+}
+.single-art-description {
+  font-size: 1.3rem;
+  color: rgb(70, 70, 70);
+  margin-top: 2rem;
+}
+.single-art-tag {
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: fit-content;
+  margin: 3rem 0;
+}
+.single-art-holder::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid rgb(221, 221, 221);
+  margin-top: 0.6rem;
+}
+.activeToggle {
+  color: green;
+}
+
+/* NewPost */
+
+.new-post-form {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.input-article {
+  width: 80%;
+  margin: 2rem auto;
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid rgb(190, 189, 189);
+}
+.input-article:focus {
+  outline: none;
+}
+.new-article-err-msg {
+  width: 80%;
+  margin: 1rem auto;
+}
+.input-article-description {
+  height: 100px;
+}
+.publish-article {
+  padding: 1rem 4rem;
+  background-color: rgb(58, 133, 58);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  display: block;
+  margin: 2rem auto;
+}
+
+/* Setting */
+
+.setting-heading {
+  font-size: 2.5rem;
+  color: rgb(14, 95, 158);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.setting {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.settings-from:after {
+  content: '';
+  border-top: 1px solid black;
+  width: 100%;
+}
+.logout-btn {
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border: 1px solid tomato;
+  color: tomato;
+  font-size: 1rem;
+  display: block;
+  margin-top: 5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 4rem;
+}
+.logout-btn:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* user profile */
+
+#user-profile-hero-section {
+  padding: 1rem;
+  background-color: rgb(223, 243, 248);
+  padding-bottom: 4rem;
+}
+.user-profile-image {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto;
+}
+.user-profile-bio {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: rgb(28, 133, 212);
+  font-weight: 600;
+}
+.user-profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.follow-user {
+  background-color: rgb(38, 165, 74);
+  padding: 10px;
+  color: rgb(249, 249, 247);
+  font-weight: 500;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  border: 1px solid gray;
+  margin-right: 2rem;
+  float: right;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+.unfollow {
+  background-color: rgb(160, 64, 8);
+}
+.user-setting {
+  background-color: rgb(64, 158, 235);
+  font-weight: 600;
+}
+.follow-user svg {
+  margin-right: 5px;
+}
+
+.ion-android-contact,
+.ion-compose,
+.ion-ios-gear {
+  margin-right: 5px;
+  font-size: 1.1rem;
+}
+
+/* Add comment */
+
+.comment-form {
+  border-radius: 10px;
+}
+.post-comment-holder {
+  padding: 1rem;
+  background-color: rgb(236, 235, 235);
+  border-radius: 8px;
+}
+.comment-box-holder,
+.comment-list-holder {
+  width: 50%;
+  margin: 3rem auto;
+  font-size: 0;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+}
+.commentInput {
+  width: 100%;
+  height: 100px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+}
+.commentInput:focus {
+  outline: none;
+}
+.comment-user-info,
+.comment-user-info svg {
+  font-size: 1.1rem;
+}
+.comment-user-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.comment-user-info h3 {
+  font-size: 0.9rem;
+}
+.post-comment {
+  padding: 10px;
+  float: none;
+  margin: 0;
+}
+.comment-text {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+.comment-username {
+  color: green;
+  font-size: 1rem;
+}
+.delete-comment {
+  border: none;
+}
+.delete-comment svg {
+  font-size: 1.3rem;
+}
+
+/* Edit And Delete Article */
+
+.edit-article {
+  padding: 0.5rem 1rem;
+  color: rgb(114, 114, 114);
+  border: 2px solid rgb(114, 114, 114);
+  background-color: transparent;
+}
+
+.delete-article {
+  padding: 0.5rem 1rem;
+  color: rgb(252, 88, 88);
+  border: 2px solid rgb(245, 78, 78);
+  background-color: transparent;
+}
+
+.unFollow-user {
+  background-color: tomato;
+}
+.ion-android-favorite,
+.ion-android-favorite-outline {
+  color: green;
+}
+.ion-ios-trash-outline {
+  border: none;
+  color: red;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* Error Message */
+
+.err-msg-heading {
+  font-size: 2rem;
+  text-align: center;
+  color: red;
+}
+.error-holder {
+  width: 80%;
+  margin: 2rem auto;
+}
+.home-btn {
+  padding: 0.5rem 1rem;
+  border: gray;
+  background-color: rgb(166, 211, 221);
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;
+  font-size: 1.3rem;
+  color: green;
+  font-weight: 600;
+}
+.home-btn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
