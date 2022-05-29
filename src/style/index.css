@@ -803,3 +803,92 @@ header {
   border: none;
   font-size: 1.2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .row {
+    display: block;
+  }
+  .container {
+    width: 90%;
+  }
+  .feed {
+    width: 100%;
+  }
+  .tags {
+    width: 100%;
+  }
+  .hero-heading {
+    font-size: 1.5rem;
+  }
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+  .header-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .nav-link {
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  .logo-holder {
+    margin-right: 2rem;
+  }
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+  .article-title {
+    font-size: 1.1rem;
+  }
+  .article-description {
+    font-size: 1rem;
+  }
+  .read-more {
+    font-size: 0.7rem;
+  }
+  .date {
+    font-size: 0.8rem;
+  }
+  .author-name {
+    font-size: 0.8rem;
+  }
+  .setting-heading {
+    font-size: 1.5rem;
+  }
+  .input-article {
+    width: 100%;
+  }
+  .setting {
+    width: 90%;
+  }
+  .single-art-description {
+    font-size: 0.9rem;
+  }
+  .comment-box-holder {
+    width: 90%;
+  }
+  .comment-list-holder {
+    width: 90%;
+  }
+  .comment-text {
+    font-size: 0.9rem;
+  }
+  .post-comment {
+    font-size: 0.9rem;
+  }
+  .comment-user-info {
+    font-size: 1rem;
+  }
+  .user-profile-name {
+    font-size: 1.1rem;
+  }
+  .user-profile-bio {
+    font-size: 1rem;
+  }
+  .follow-user {
+    font-size: 0.7rem;
+    padding: 5px 15px;
+    margin-top: 10px;
+  }
+}

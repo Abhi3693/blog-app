@@ -26,7 +26,7 @@ function Header() {
 function AuthHeader() {
   const contextInfo = useContext(LoginUserContext);
   return (
-    <ol className='flex gap-2 align-center'>
+    <ol className='flex gap-2 align-center header-nav'>
       <li>
         <NavLink to='/' className='nav-link' activeclassname='active' exact>
           Home
