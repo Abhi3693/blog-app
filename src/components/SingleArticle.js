@@ -93,6 +93,7 @@ function SingleArticle(props) {
       </section>
       <div className='container'>
         <section className='single-art-holder'>
+          <p className='single-art-body'>{article.body}</p>
           <p className='single-art-description'>{article.description}</p>
           <ul className='flex gap-half'>
             {article.tagList.map((tag) => {
