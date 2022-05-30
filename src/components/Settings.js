@@ -132,7 +132,7 @@ function Settings(props) {
       </form>
       <div className='logout-holder'>
         <button onClick={props.logoutUser} className='logout-btn'>
-          Or click here to logout
+          Click here to logout
         </button>
       </div>
     </div>
